@@ -1,9 +1,10 @@
 import java.util.*;
+
 public class PantallaGaleria {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            int opcion=0;
-            while (opcion<16){
+            int opcion = 0;
+            while (opcion < 16) {
                 System.out.println("Estas son las opciones");
                 System.out.println(" 1. Ver listado de Obras discponibles ");
                 System.out.println(" 2. Buscar una Obra por titulo. artista o año ");
@@ -18,22 +19,26 @@ public class PantallaGaleria {
                 System.out.println(" 11. Relizar compra de una Obra ");
                 System.out.println(" 12. Eliminar compra de Obra ");
                 System.out.println(" 13. Ver listado de Compras existentes");
-                System.out.println(" 14. Ver listado de Compras para un mes y año específico insertado por el usuario ");
+                System.out
+                        .println(" 14. Ver listado de Compras para un mes y año específico insertado por el usuario ");
                 System.out.println(" 15. Ver listado de Artistas más vendidos ");
                 System.out.println(" 16. Salir ");
                 System.out.print("Digite una opcion: ");
                 opcion = scanner.nextInt();
                 switch (opcion) {
                     case 1:
-                        
+
                         break;
                     case 2:
-                        
+
                         break;
                     case 3:
-                        
+
                         break;
-                
+                    case 4:
+
+                        break;
+
                     default:
                         break;
                 }
