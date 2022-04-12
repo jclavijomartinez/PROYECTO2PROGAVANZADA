@@ -70,7 +70,7 @@ public class PantallaGaleria {
                     case 14:
 
                         break;
-                    case 16:
+                    case 15:
 
                         break;
 
