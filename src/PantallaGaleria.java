@@ -19,8 +19,7 @@ public class PantallaGaleria {
                 System.out.println(" 11. Relizar compra de una Obra ");
                 System.out.println(" 12. Eliminar compra de Obra ");
                 System.out.println(" 13. Ver listado de Compras existentes");
-                System.out
-                        .println(" 14. Ver listado de Compras para un mes y año específico insertado por el usuario ");
+                System.out.println(" 14. Ver listado de Compras para un mes y año específico insertado por el usuario ");
                 System.out.println(" 15. Ver listado de Artistas más vendidos ");
                 System.out.println(" 16. Salir ");
                 System.out.print("Digite una opcion: ");
