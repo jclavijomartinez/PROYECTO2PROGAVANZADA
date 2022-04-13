@@ -6,7 +6,7 @@ public class PantallaGaleria {
             int opcion = 0;
             while (opcion < 16) {
                 System.out.println("Estas son las opciones");
-                System.out.println(" 1. Ver listado de Obras discponibles ");
+                System.out.println(" 1. Ver listado de Obras disponibles ");
                 System.out.println(" 2. Buscar una Obra por titulo. artista o anio ");
                 System.out.println(" 3. Insertar Obrar ");
                 System.out.println(" 4. Modificar Obra ");
