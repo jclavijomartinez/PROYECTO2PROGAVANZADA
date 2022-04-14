@@ -4,7 +4,7 @@ public class PantallaGaleria {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             int opcion = 0;
-            while (opcion < 16) {
+            while (opcion < 16) { // comentario prueba
                 System.out.println("Estas son las opciones");
                 System.out.println(" 1. Ver listado de Obras disponibles ");
                 System.out.println(" 2. Buscar una Obra por titulo. artista o anio ");
@@ -19,7 +19,8 @@ public class PantallaGaleria {
                 System.out.println(" 11. Relizar compra de una Obra ");
                 System.out.println(" 12. Eliminar compra de Obra ");
                 System.out.println(" 13. Ver listado de Compras existentes");
-                System.out.println(" 14. Ver listado de Compras para un mes y anio especifico insertado por el usuario ");
+                System.out
+                        .println(" 14. Ver listado de Compras para un mes y anio especifico insertado por el usuario ");
                 System.out.println(" 15. Ver listado de Artistas mas vendidos ");
                 System.out.println(" 16. Salir ");
                 System.out.print("Digite una opcion: ");
