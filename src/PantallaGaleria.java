@@ -19,18 +19,7 @@ public class PantallaGaleria {
                 System.out.println(" 11. Relizar compra de una Obra ");
                 System.out.println(" 12. Eliminar compra de Obra ");
                 System.out.println(" 13. Ver listado de Compras existentes");
-                System.out
-                        .println(" 14. Ver listado de Compras para un mes y anio especifico insertado por el usuario "); // creo
-                                                                                                                         // que
-                                                                                                                         // ese
-                                                                                                                         // salto
-                                                                                                                         // toca
-                                                                                                                         // dejarlo
-                                                                                                                         // asi
-                                                                                                                         // npi
-                                                                                                                         // de
-                                                                                                                         // porque
-                                                                                                                         // aparece
+                System.out.println(" 14. Ver listado de Compras para un mes y anio especifico insertado por el usuario "); //esta es pra voces aficion SSSIIIIIIIUUUUUUU
                 System.out.println(" 15. Ver listado de Artistas mas vendidos ");
                 System.out.println(" 16. Salir ");
                 System.out.print("Digite una opcion: ");
