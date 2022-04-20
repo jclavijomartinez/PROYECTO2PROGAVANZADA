@@ -1,5 +1,5 @@
 import java.util.*;
-//comentrio para probar pussh JD
+//comentrio para probar pull JUANDAVID
 public class PantallaGaleria {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
