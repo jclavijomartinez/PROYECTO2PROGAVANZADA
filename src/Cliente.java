@@ -1,11 +1,11 @@
 public class Cliente {
-    private Cliente compraCliente;
     private Long codigoCliente;
     private Long cedula;
     private String nombre;
     private String Apellidos;
     private String direccionEntrega;
     private Long telefono;
+    private int codigoCompra;
 
     public void setCodigoCliente(Long codigoCliente) {
         this.codigoCliente = codigoCliente;
@@ -54,13 +54,21 @@ public class Cliente {
     public Long getTelefono() {
         return telefono;
     }
+    public void setCodigoCompra(int codigoCompra) {
+        this.codigoCompra = codigoCompra;
+    }
+
+    public int getCodigoCompra() {
+        return codigoCompra;
+    }
 
     public Cliente(Long codigoCliente, Long cedula, String nombre, String Apellidos, String direccionEntrega,
-            Long telefono) {
+            Long telefono,int codigoCompra) {
         this.setCodigoCliente(codigoCliente);
         this.setCedula(cedula);
         this.setApellidos(Apellidos);
         this.setDireccionEntrega(direccionEntrega);
         this.setTelefono(telefono);
+        this.setCodigoCompra(codigoCompra);
     }
 }
