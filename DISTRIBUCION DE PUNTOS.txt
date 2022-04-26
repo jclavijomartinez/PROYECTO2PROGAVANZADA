@@ -1,13 +1,13 @@
 JS|falta imprimir la fecha con formato
 JS|en proceso
-JS|FAlTA TODO
-JS|FAlTA TODO
+JS|en proceso
 JS|FAlTA TODO
 JD|listo
 JD|listo
+JD|listo
+JD|listo
 JD|en proceso
-JD|en proceso
-JD|en proceso
+AC|FALTA TODO
 AC|FAlTA TODO
 AC|FAlTA TODO
 AC|FAlTA TODO
