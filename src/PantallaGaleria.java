@@ -231,7 +231,7 @@ public class PantallaGaleria {
                                      }
                                  }
                             } catch (Exception e) {
-                                //prueba del push centa
+                                //prueba del pull centanaro
                             }
                            
 
