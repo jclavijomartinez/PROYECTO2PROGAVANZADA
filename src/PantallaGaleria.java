@@ -228,7 +228,7 @@ public class PantallaGaleria {
                                  }
                                  else{
                                      for (int i = 0; i < Listaimprimir.size(); i++) {
-                                         
+                                         Listaimprimir.get(i);
                                      }
                                  }
                             } catch (Exception e) {
