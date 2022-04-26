@@ -218,11 +218,11 @@ public class PantallaGaleria {
                     case 8:
                             try {
                                 Long CodModificar;
-                                 System.out.println("Ingrese el codigo del cliente a modificar ");
+                                 System.out.println("Ingrese el codigo del cliente a eliminar ");
                                  CodModificar = scanner.nextLong();
                                  if (CodModificar!=codigo)
                                  {
-                                     System.out.print("El codigo no exite");
+                                     System.out.print("El codigo no se encuentra en los registros cree uno primero");
                                      break;
                                  }
                                  else{
@@ -239,11 +239,42 @@ public class PantallaGaleria {
                         break;
 
                     case 9:
+                    try {
+                        Long codEliminar;
+
+                        System.out.println("Ingrese el codigo del cliente al eliminar: ");
+                        codEliminar=scanner.nextLong();
+                        if(codEliminar==codigo){
+                            for (int i = 0; i < GestionClientes(codigoCompra) ; i++) {
+                                if(){
+
+                                }
+                            }
+                            if(codEliminar){
+
+                            }
+                            
+                        }
+                        else{
+                            System.out.println("Porfavor ingrese un codigo valido o cree un nuevo cliente");
+                            
+                        }
+                    } catch (Exception e) {
+                        //TODO: handle exception
+                    }
 
                         break;
 
                     case 10:
-
+                    int numAleatorio;
+                    System.out.println("Ingrese el codigo de obra: ");
+                    
+                    System.out.println("Ingrese el codigo del cliente ");
+                    codigo=scanner.nextInt();
+                   
+                    Random numRandom=new Random(9999);//Semilla
+                    codigoCompra=numRandom.nextInt(0000-9999+1)+9999;//se crea el numero aleatorio
+                    
                         break;
 
                     case 11:

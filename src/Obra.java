@@ -9,6 +9,7 @@ public class Obra {
     private float precioRef;
     private String dimensiones;
     private boolean disponible;
+    private int compra;
 
     public void setCodigoObra(Long codigoObra) {
         this.codigoObra = codigoObra;
@@ -57,14 +58,16 @@ public class Obra {
     public boolean getDisponibles() {
         return disponible;
     }
+   
 
     public Obra(Long codigoObra, String titulo, Calendar fecha, float precioRef, String dimensiones,
-            boolean disponible) {
+            boolean disponible,int codigoCompra) {
         this.setCodigoObra(codigoObra);
         this.setTitulo(titulo);
         this.setFecha(fecha);
         this.setPrecioRef(precioRef);
         this.setDimensiones(dimensiones);
         this.setDisponibles(disponible);
+        this.setcodigoCompra(codigoCompra);
     }
 }
