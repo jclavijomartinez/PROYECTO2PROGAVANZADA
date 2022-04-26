@@ -54,7 +54,9 @@ public class Cliente {
     public Long getTelefono() {
         return telefono;
     }
-    public Cliente(Long codigoCliente,Long cedula,String nombre,String Apellidos,String direccionEntrega,Long telefono) {
+
+    public Cliente(Long codigoCliente, Long cedula, String nombre, String Apellidos, String direccionEntrega,
+            Long telefono) {
         this.setCodigoCliente(codigoCliente);
         this.setCedula(cedula);
         this.setApellidos(Apellidos);

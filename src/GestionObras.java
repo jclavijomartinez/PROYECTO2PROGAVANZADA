@@ -7,12 +7,12 @@ public class GestionObras {
         List<Obra> listaobras = new ArrayList<>();
         Calendar fecha = Calendar.getInstance();
         fecha.set(1503, 06, 23);
-        Obra obra1 = new Obra(0001L, "La gioconda", fecha, 1000000.0f, "77x53");
+        Obra obra1 = new Obra(0000001L, "La gioconda", fecha, 1000000.0f, "77x53", true);
         fecha.set(1503, 06, 23);
-        Obra obra2 = new Obra(0002L, "La noche estrellada", fecha, 2000000.0f, "74x92");
-        Obra obra3 = new Obra(0003L, "Las meninas", fecha, 3000000.0f, "318x276");
-        Obra obra4 = new Obra(0004L, "La ultima cena", fecha, 4000000.0f, "460x880");
-        Obra obra5 = new Obra(0003L, "Las meninas", fecha, 5000000.0f, "318x276");
+        Obra obra2 = new Obra(0000002L, "La noche estrellada", fecha, 2000000.0f, "74x92", true);
+        Obra obra3 = new Obra(0000003L, "Las meninas", fecha, 3000000.0f, "318x276", true);
+        Obra obra4 = new Obra(0000004L, "La ultima cena", fecha, 4000000.0f, "460x880", true);
+        Obra obra5 = new Obra(0000003L, "Las meninas", fecha, 5000000.0f, "318x276", true);
         listaobras.add(obra1);
         listaobras.add(obra2);
         listaobras.add(obra3);
@@ -34,7 +34,7 @@ public class GestionObras {
     public void EliminarObra(int codigo, List<Obra> listaobras, int codigoCompra) throws Exception {
         for (int i = 0; i < listaobras.size(); i++) {
             if (codigo == listaobras.get(i).getCodigoObra()) {
-                System.out.print("La mierda existe");
+                System.out.print("La mierda existe"); //cambiar a otra cosa
             } else {
                 throw new Exception();
 
@@ -48,9 +48,9 @@ public class GestionObras {
                     System.out.print("Desea eliminar la obra y/n");
                     confirmacion = scanner.nextLine();
                     if (confirmacion == "y") {
-                            System.out.print("La obra fue elimando con exito");
+                        System.out.print("La obra fue elimando con exito");
                     } else {
-                                System.out.print("La obra no se a  eliminado");
+                        System.out.print("La obra no se a  eliminado");
                     }
 
                 } catch (Exception e) {
