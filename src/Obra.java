@@ -1,17 +1,17 @@
 import java.util.Calendar;
 
 public class Obra {
-    private Artista artis;
-    private Obra compraObra;
+    private Artista artista;
     private Long codigoObra;
     private String titulo;
     private Calendar fecha;
     private float precioRef;
     private String dimensiones;
     private boolean disponible;
+    private int codigoCompra;
 
-    public void setCodigoObra(Long codigoObra) {
-        this.codigoObra = codigoObra;
+    public void setCodigoObra(Long codigoObra2){
+        this.codigoObra = codigoObra2;
     }
 
     public Long getCodigoObra() {
@@ -58,9 +58,25 @@ public class Obra {
         return disponible;
     }
 
-    public Obra(Long codigoObra, String titulo, Calendar fecha, float precioRef, String dimensiones,
-            boolean disponible) {
-        this.setCodigoObra(codigoObra);
+    public void setCodigoCompra(int codigoCompra) {
+        this.codigoCompra = codigoCompra;
+    }
+
+    public int getCodigoCompra() {
+        return codigoCompra;
+    }
+    public Long verificarcodigo(String cod) {
+        if (cod.length()==7) {
+            Long resultado;
+            resultado = Long.parseLong(cod);
+            return resultado;
+        } else {
+            return 0l;
+        }
+    }
+
+    public Obra( String codigoObra, String titulo, Calendar fecha, float precioRef, String dimensiones,boolean disponible) {
+        this.setCodigoObra(verificarcodigo(codigoObra));
         this.setTitulo(titulo);
         this.setFecha(fecha);
         this.setPrecioRef(precioRef);

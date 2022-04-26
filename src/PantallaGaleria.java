@@ -96,7 +96,12 @@ public class PantallaGaleria {
                         try (Scanner  nuevaobra = new Scanner(System.in)) {
                             System.out.print("Dame el codigo de la nueva obra (tiene que tener 7 digitos): ");
                             String codigoObraNueva = scanner.nextLine();
-
+                            Long codigoobra;
+                            if (codigoObraNueva.length()==7) {
+                                codigoobra = Long.parseLong(codigoObraNueva);
+                            } else {
+                                System.out.println("el numero que ingresaste no tiene 7 digitos");
+                            }
                             System.out.println("");
                             System.out.print("Dame el titulo de la nueva obra: ");
                             String tituloObraNueva = scanner.nextLine();
