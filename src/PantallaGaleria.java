@@ -1,3 +1,4 @@
+import java.nio.channels.NonWritableChannelException;
 import java.util.*;
 
 //comentrio para probar pull JUANDAVID
@@ -96,12 +97,6 @@ public class PantallaGaleria {
                         try (Scanner  nuevaobra = new Scanner(System.in)) {
                             System.out.print("Dame el codigo de la nueva obra (tiene que tener 7 digitos): ");
                             String codigoObraNueva = scanner.nextLine();
-                            Long codigoobra;
-                            if (codigoObraNueva.length()==7) {
-                                codigoobra = Long.parseLong(codigoObraNueva);
-                            } else {
-                                System.out.println("el numero que ingresaste no tiene 7 digitos");
-                            }
                             System.out.println("");
                             System.out.print("Dame el titulo de la nueva obra: ");
                             String tituloObraNueva = scanner.nextLine();
@@ -124,7 +119,7 @@ public class PantallaGaleria {
                             System.out.println("");
                             List<Obra> listaobras = new ArrayList<>();
                             List<Artista> listartistas = new ArrayList<>();
-                            Obra obranueva = new Obra(codigoObraNueva, tituloObraNueva, nuevafecha, precioObraNueva, dimsObraNueva, true);
+                            Obra obranueva= new Obra(codigoObraNueva,tituloObraNueva, nuevafecha, precioObraNueva, dimsObraNueva, true);
                             GestionObras obras1 = new GestionObras();
                             listaobras = obras1.crearobras();
                             listaobras.add(obranueva);
@@ -223,11 +218,11 @@ public class PantallaGaleria {
                     case 8:
                             try {
                                 Long CodModificar;
-                                 System.out.println("Ingrese el codigo del cliente a eliminar ");
+                                 System.out.println("Ingrese el codigo del cliente a modificar ");
                                  CodModificar = scanner.nextLong();
                                  if (CodModificar!=codigo)
                                  {
-                                     System.out.print("El codigo no se encuentra en los registros cree uno primero");
+                                     System.out.print("El codigo no exite");
                                      break;
                                  }
                                  else{
@@ -244,42 +239,11 @@ public class PantallaGaleria {
                         break;
 
                     case 9:
-                    try {
-                        Long codEliminar;
-
-                        System.out.println("Ingrese el codigo del cliente al eliminar: ");
-                        codEliminar=scanner.nextLong();
-                        if(codEliminar==codigo){
-                            for (int i = 0; i < GestionClientes(codigoCompra) ; i++) {
-                                if(){
-
-                                }
-                            }
-                            if(codEliminar){
-
-                            }
-                            
-                        }
-                        else{
-                            System.out.println("Porfavor ingrese un codigo valido o cree un nuevo cliente");
-                            
-                        }
-                    } catch (Exception e) {
-                        //TODO: handle exception
-                    }
 
                         break;
 
                     case 10:
-                    int numAleatorio;
-                    System.out.println("Ingrese el codigo de obra: ");
-                    
-                    System.out.println("Ingrese el codigo del cliente ");
-                    codigo=scanner.nextInt();
-                   
-                    Random numRandom=new Random(9999);//Semilla
-                    codigoCompra=numRandom.nextInt(0000-9999+1)+9999;//se crea el numero aleatorio
-                    
+
                         break;
 
                     case 11:

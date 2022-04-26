@@ -8,11 +8,7 @@ public class Obra {
     private float precioRef;
     private String dimensiones;
     private boolean disponible;
-<<<<<<< HEAD
-    private int codigoCompra;
-=======
     private int compra;
->>>>>>> 66f94f3901bb6ea0b2a15dbaa35c9a416beb4bc9
 
     public void setCodigoObra(Long codigoObra2){
         this.codigoObra = codigoObra2;
