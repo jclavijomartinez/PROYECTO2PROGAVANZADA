@@ -1,5 +1,7 @@
 import java.util.Calendar;
 public class Obra {
+    private Artista artis;
+    private Obra compraObra;
     private Long codigoObra;
     private String titulo;
     private Calendar fecha;
@@ -33,5 +35,13 @@ public class Obra {
     }
     public String getDimensiones() {
         return dimensiones;
+    }
+    public Obra(Long codigoObra,String titulo,Calendar fecha,float precioRef,String dimensiones
+    ) {
+        this.setCodigoObra(codigoObra);
+        this.setTitulo(titulo);
+        this.setFecha(fecha);
+        this.setPrecioRef(precioRef);
+        this.setDimensiones(dimensiones);
     }
 }
