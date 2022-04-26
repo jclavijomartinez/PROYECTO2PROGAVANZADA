@@ -226,17 +226,12 @@ public class PantallaGaleria {
                                      break;
                                  }
                                  else{
-<<<<<<< HEAD
-                                     for (int i = 0; i < 5; i++) {
-                                         
-=======
                                      for (int i = 0; i < Listaimprimir.size(); i++) {
                                          Listaimprimir.get(i);
->>>>>>> 14ff6e03d9a7074752dc1f8f71dab2a882a06150
                                      }
                                  }
                             } catch (Exception e) {
-                                //TODO: handle exception
+                                //prueba del push centa
                             }
                            
 
