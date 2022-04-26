@@ -22,7 +22,7 @@ public class GestionObras {
         return listaobras;
     }
 
-    public List<Artista> crearartistas() {
+    public List<Artista> crearartistas() { //tambien lo pondria como void
         List<Artista> listaartistas = new ArrayList<>();
         Calendar fechanacimiento = Calendar.getInstance();
         fechanacimiento.set(1999, 2, 15);

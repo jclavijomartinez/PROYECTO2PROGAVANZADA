@@ -9,4 +9,8 @@ public class ControlGaleria {
         this.obras.crearartistas();
         this.clientes.crearClientes();
     }
+
+    public void eliminarcliente(){
+        System.out.println("ingrese un numero de identificación");
+    }
 }

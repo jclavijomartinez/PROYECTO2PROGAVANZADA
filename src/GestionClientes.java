@@ -5,8 +5,8 @@ public class GestionClientes {
     private GestionObras gestionObras;
     private Cliente clientes;
 
-    public List<Cliente> crearClientes() {
-        List<Cliente> Listaclientes = new ArrayList<>();
+    public List<Cliente> crearClientes() { //las pondria tipo void por lo que 
+        List<Cliente> Listaclientes = new ArrayList<>(); 
         Cliente cliente1 = new Cliente(9876l, 1000365419l, "Brayan ", "Estivenson", "cra 143 #22-56a", 3192399712l);
         Listaclientes.add(cliente1);
         Cliente cliente2 = new Cliente(2314l, 1000785419l, "Juan", "perez", "cra 151 #26-90", 3214180084l);
