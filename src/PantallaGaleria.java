@@ -32,37 +32,36 @@ public class PantallaGaleria {
                 switch (opcion) {
                     case 1:
                         GestionObras arte = new GestionObras();
-                        List<Obra> listaobrasdisponible = new ArrayList<>();
-                        listaobrasdisponible = arte.crearobras();
-                        for (int i = 0; i < listaobrasdisponible.size(); i++) {
-                            if (listaobrasdisponible.get(i).getDisponibles() == true) {
-                                System.out.println("[" + i + "] " + "Titulo: " + listaobrasdisponible.get(i).getTitulo()+ " fecha de creacion: "+ /* listaobrasdisponible.get(i).getFecha()+ */" precio de referencia: "+ listaobrasdisponible.get(i).getPrecioRef() + " COP, Dimensiones: "+ listaobrasdisponible.get(i).getDimensiones());
+                        List<Obra> listaobrasdisponibles = new ArrayList<>();
+                        listaobrasdisponibles = arte.crearobras();
+                        for (int i = 0; i < listaobrasdisponibles.size(); i++) {
+                            if (listaobrasdisponibles.get(i).getDisponibles() == true) {
+                                System.out.println("[" + i + "] " + "Titulo: " + listaobrasdisponibles.get(i).getTitulo()+ " fecha de creacion: "+ /* listaobrasdisponible.get(i).getFecha()+ */" precio de referencia: "+ listaobrasdisponibles.get(i).getPrecioRef() + " COP, Dimensiones: "+ listaobrasdisponibles.get(i).getDimensiones());
                             }
                         }
                         break;
                     case 2:
                         GestionObras obraspararecorrer = new GestionObras();
-                        List<Obra> listaobrasdisponibles = new ArrayList<>();
+                        List<Obra> listaobraspunto2 = new ArrayList<>();
                         List<Artista> artistas = new ArrayList<>();
-                        listaobrasdisponibles = obraspararecorrer.crearobras();
+                        listaobraspunto2 = obraspararecorrer.crearobras();
                         artistas = obraspararecorrer.crearartistas();
                         try (Scanner criterio = new Scanner(System.in)) {
+                            int opc = 0;
                             System.out.println("los criterios de busqueda son:");
                             System.out.println("1. titulo");
                             System.out.println("2. artista");
                             System.out.println("3. año");
                             System.out.print("cual es el criterio de busqueda: ");
-                            int opc = 0;
                             opc = scanner.nextInt();
-                            System.out.println(" ");
                             if (opc == 1) {
                                 String titulo;
                                 System.out.print("Dame el titulo que quieres buscar: ");
                                 titulo = scanner.nextLine();
                                 System.out.println(" ");
-                                for (int i = 0; i < listaobrasdisponibles.size(); i++) {
-                                    if (listaobrasdisponibles.get(i).getTitulo() == titulo) {
-                                        System.out.println("[" + i + "] " + "Titulo: "+ listaobrasdisponibles.get(i).getTitulo() + " fecha de creacion: "+ /* listaobrasdisponible.get(i).getFecha()+ */" precio de referencia: "+ listaobrasdisponibles.get(i).getPrecioRef() + " COP, Dimensiones: "+ listaobrasdisponibles.get(i).getDimensiones());
+                                for (int i = 0; i < listaobraspunto2.size(); i++) {
+                                    if (listaobraspunto2.get(i).getTitulo() == titulo) {
+                                        System.out.println("[" + i + "] " + "Titulo: "+ listaobraspunto2.get(i).getTitulo() + " fecha de creacion: "+ /* listaobrasdisponible.get(i).getFecha()+ */" precio de referencia: "+ listaobraspunto2.get(i).getPrecioRef() + " COP, Dimensiones: "+ listaobraspunto2.get(i).getDimensiones());
                                     }
                                 }
                             } else if (opc == 2) {
@@ -70,7 +69,7 @@ public class PantallaGaleria {
                                 System.out.print("Dame el artista que quieres buscar: ");
                                 artista = scanner.nextLine();
                                 System.out.println(" ");
-                                for (int i = 0; i < listaobrasdisponibles.size(); i++) {
+                                for (int i = 0; i < listaobraspunto2.size(); i++) {
                                     if (artistas.get(i).getNombre() == artista) {
                                         System.out.println("[" + i + "] " + " Codigo: " + artistas.get(i).getCodigoArtista()+ " cedula: " + artistas.get(i).getCedula() + " Nombre: "+artistas.get(i).getNombre()+" Apellido: "+artistas.get(i).getApellidos()+" fecha de nacimiento: "+artistas.get(i).getFechaNacimiento()+" telefono: "+artistas.get(i).getTelefono());
                                     }
@@ -80,24 +79,24 @@ public class PantallaGaleria {
                                 System.out.print("Dame el year que quieres buscar: ");
                                 year = scanner.nextInt();
                                 System.out.println("");
-                                for (int i = 0; i < listaobrasdisponibles.size(); i++) {
-                                    if (true/*listaobrasdisponibles.get(i).getFecha(). == year      TRABAJARLE*/) {
-                                        System.out.println("[" + i + "] " + "Titulo: "+ listaobrasdisponibles.get(i).getTitulo() + " fecha de creacion: "+ /* listaobrasdisponible.get(i).getFecha()+ */" precio de referencia: "+ listaobrasdisponibles.get(i).getPrecioRef() + " COP, Dimensiones: "+ listaobrasdisponibles.get(i).getDimensiones());
+                                for (int i = 0; i < listaobraspunto2.size(); i++) {
+                                    if (listaobraspunto2.get(i).getFecha().YEAR == year) {
+                                        System.out.println("[" + i + "] " + "Titulo: "+ listaobraspunto2.get(i).getTitulo() + " fecha de creacion: "+ listaobraspunto2.get(i).getFecha().YEAR+" / "+listaobraspunto2.get(i).getFecha().MONTH+" / "+listaobraspunto2.get(i).getFecha().DATE+" precio de referencia: "+ listaobraspunto2.get(i).getPrecioRef() + " COP, Dimensiones: "+ listaobraspunto2.get(i).getDimensiones());
                                     }
                                 }
                             }
                         } catch (InputMismatchException e) {
                             System.out.println("revisa el dato que ingresaste");
+                        } catch (NoSuchElementException e) {
+                            System.out.println("revisa lo que ingresaste");
                         }
                         break;
                     case 3:
                     Calendar nuevafecha = Calendar.getInstance();
                         try (Scanner  nuevaobra = new Scanner(System.in)) {
                             System.out.print("Dame el codigo de la nueva obra (tiene que tener 7 digitos): ");
-                            for (int i = 0; i < args.length; i++) {
-                                
-                            }
-                            Long codigoObraNueva = scanner.nextLong();
+                            String codigoObraNueva = scanner.nextLine();
+
                             System.out.println("");
                             System.out.print("Dame el titulo de la nueva obra: ");
                             String tituloObraNueva = scanner.nextLine();
@@ -126,7 +125,7 @@ public class PantallaGaleria {
                             listaobras.add(obranueva);
                             listartistas = obras1.crearartistas();
                             for (int i = 0; i < listartistas.size(); i++) {
-                                System.out.println("falta listar");
+                                System.out.println("");
                             }
                             
                             
@@ -227,8 +226,13 @@ public class PantallaGaleria {
                                      break;
                                  }
                                  else{
+<<<<<<< HEAD
+                                     for (int i = 0; i < 5; i++) {
+                                         
+=======
                                      for (int i = 0; i < Listaimprimir.size(); i++) {
                                          Listaimprimir.get(i);
+>>>>>>> 14ff6e03d9a7074752dc1f8f71dab2a882a06150
                                      }
                                  }
                             } catch (Exception e) {
