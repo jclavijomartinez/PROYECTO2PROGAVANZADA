@@ -1,4 +1,5 @@
 public class Cliente {
+    private Cliente compraCliente;
     private Long codigoCliente;
     private Long cedula;
     private String nombre;
@@ -52,5 +53,12 @@ public class Cliente {
 
     public Long getTelefono() {
         return telefono;
+    }
+    public Cliente(Long codigoCliente,Long cedula,String nombre,String Apellidos,String direccionEntrega,Long telefono) {
+        this.setCodigoCliente(codigoCliente);
+        this.setCedula(cedula);
+        this.setApellidos(Apellidos);
+        this.setDireccionEntrega(direccionEntrega);
+        this.setTelefono(telefono);
     }
 }

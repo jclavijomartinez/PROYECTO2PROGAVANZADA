@@ -1,6 +1,7 @@
 import java.util.Calendar;
 
 public class Artista {
+    private Obra obraa;
     private Long codigoArtista;
     private Long cedula;
     private String nombre;
@@ -42,5 +43,13 @@ public class Artista {
     }
     public Long getTelefono() {
         return telefono;
+    }
+    public Artista(Long codigoArtista,Long cedula,String nombre,String apellidos,Calendar fechaNacimiento,Long telefono) {
+        this.setCodigoArtista(codigoArtista);
+        this.setCedula(cedula);
+        this.setNombre(nombre);
+        this.setApellidos(apellidos);
+        this.setFechaNacimiento(fechaNacimiento);
+        this.setTelefono(telefono);
     }
 }

@@ -1,9 +1,13 @@
 import java.util.*;
 //comentrio para probar pull JUANDAVID
 public class PantallaGaleria {
+    private ControlGaleria galeria;
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             int opcion = 0;
+            int codigo = 0;
+            int codigoCompra = 0;
+            GestionObras test1 = new GestionObras(); //prueba BORRAR PARA ENTREGA
             while (opcion < 16) { // comentario prueba
                 System.out.println("Estas son las opciones");
                 System.out.println(" 1. Ver listado de Obras disponibles ");
@@ -37,7 +41,17 @@ public class PantallaGaleria {
                     case 4:
 
                         break;
-                    case 5:
+                    case 5: 
+                    try {
+                            System.out.print("Digite el codigo de la obra: ");
+                            codigo = scanner.nextInt();
+                            System.out.print("Digite el codigo de compra de la obra ");
+                            codigoCompra = scanner.nextInt();
+                            test1.EliminarObra(codigo, test1.crearobras(), codigoCompra);
+                        } catch (Exception e) {
+                            System.out.print("El codigo no existe");
+                            break;
+                        }
 
                         break;
                     case 6:
