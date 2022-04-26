@@ -1,12 +1,12 @@
 import java.util.*;
 public class ControlGaleria {
-    private GestionClientes gestionCliente;
-    private Obra listasObras;
-    private Artista listaArtistas;
-    private Compra compras;
-    private Cliente listaCliente;
-    public static void main(String[] args) {
-        List<Obra> listaobras = new ArrayList<>();
-        
+    private GestionObras obras;
+    private GestionClientes clientes;
+    public ControlGaleria(GestionObras obras,GestionClientes clientes) {
+        this.obras.crearobras();
+        this.obras.crearartistas();
+        this.clientes.crearClientes();
     }
 }
+
+

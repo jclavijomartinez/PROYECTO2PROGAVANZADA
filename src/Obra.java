@@ -7,6 +7,7 @@ public class Obra {
     private Calendar fecha;
     private float precioRef;
     private String dimensiones;
+    private boolean disponible;
     public void setCodigoObra(Long codigoObra) {
         this.codigoObra = codigoObra;
     }
@@ -36,8 +37,10 @@ public class Obra {
     public String getDimensiones() {
         return dimensiones;
     }
-    public Obra(Long codigoObra,String titulo,Calendar fecha,float precioRef,String dimensiones
-    ) {
+    public void setDisponibles(boolean disponibles) {
+        this.disponible = disponibles;
+    }
+    public Obra(Long codigoObra,String titulo,Calendar fecha,float precioRef,String dimensiones) {
         this.setCodigoObra(codigoObra);
         this.setTitulo(titulo);
         this.setFecha(fecha);

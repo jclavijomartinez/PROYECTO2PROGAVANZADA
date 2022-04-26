@@ -55,7 +55,13 @@ public class PantallaGaleria {
 
                         break;
                     case 6:
+                            GestionClientes lista;
+                            List<Cliente> Listaimprimir= new ArrayList<>();
+                             Listaimprimir = lista.crearClientes();
+                             for (int i = 0; i <Listaimprimir.size(); i++) {
 
+                                 System.out.print("Cedula: "Listaimprimir.get(i).getCedula()+"Nombre Completo: "+Listaimprimir.get(i).getNombre()+Listaimprimir.get(i).getApellidos()+"Direccion: "+Listaimprimir.get(i).getDireccionEntrega()+"Telefono: "+Listaimprimir.);
+                             }
                         break;
                     case 7:
 
