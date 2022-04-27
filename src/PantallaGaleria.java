@@ -1,5 +1,7 @@
     import java.nio.channels.NonWritableChannelException;
-    import java.util.*;
+import java.time.Month;
+import java.time.Year;
+import java.util.*;
     public class PantallaGaleria {
         private ControlGaleria galeria;
 
@@ -355,11 +357,11 @@
 
                         case 9:
                             try {
-                                for (int index = 0; index < ; index++) {
+                                for (int index = 0; index < lista.crearClientes().size(); index++) {
                                     
                                 }
                                 Long codEliminar;
-                                System.out.println("Ingrese el codigo del cliente a eliminar: ");
+                                System.out.println("Ingrese el codigo del cliente a modificar: ");
                                 codEliminar=scanner.nextLong();
                                 if(codEliminar==codigo){
                                     
@@ -375,9 +377,10 @@
                         case 10:
                         try {
                             int numAleatoreo;
+                            
                             int opcition;
                             System.out.println("Dame el codigo de la obra");
-                            listaeditable
+                            
                             System.out.println("Dame el codigo del cliente");
                             if(codigoCompra==0){
                                 Random numRandom=new Random(2345);
@@ -393,7 +396,7 @@
                                     System.out.println(GestionClientes().crearClientes(cliente1));
                                     System.out.println(GestionObras().crearobras(obra1));
                                     if(codigoCliente==0){
-                                        System.out.println("Nohay una compra por parte de este cliente");
+                                        System.out.println("No hay una compra por parte de este cliente");
                                     }
 
                                     break;
@@ -403,7 +406,7 @@
                                     System.out.println(GestionObras().crearobras(obra2));
 
                                     if(codigoCliente==0){
-                                        System.out.println("Nohay una compra por parte de este cliente");
+                                        System.out.println("No hay una compra por parte de este cliente");
                                     }
                                     break;
 
@@ -413,7 +416,7 @@
                                     System.out.println(GestionObras().crearobras(obra3));
                                     
                                     if(codigoCliente==0){
-                                        System.out.println("Nohay una compra por parte de este cliente");
+                                        System.out.println("No hay una compra por parte de este cliente");
                                     }
                                     break;
                                 case 4:
@@ -422,7 +425,7 @@
                                     System.out.println(GestionObras().crearobras(obra4));
                                     
                                     if(codigoCliente==0){
-                                        System.out.println("Nohay una compra por parte de este cliente");
+                                        System.out.println("No hay una compra por parte de este cliente");
                                     }
                                     break;
 
@@ -432,6 +435,7 @@
                             
                         
                         } catch (Exception e) {
+                            System.out.println("Revisa la entrada o el cidigo de compra");
                             //TODO: handle exception
                         }
                         
@@ -439,6 +443,15 @@
                             break;
 
                         case 11:
+
+                        int codigoCompraeliminado;
+                        System.out.println("Ingrese el numero de compra a eliminar: \n");
+                        codigoCompraeliminado=scanner.nextInt();
+                        if (codigoCompra==0) {
+                            System.out.println("porfaa compra una obra por la causaa!!");
+                        } else {
+                            System.out.println("La compra se ha eliminado de forma exitosa!!");
+                        }
 
                             break;
                         case 12:
@@ -448,6 +461,15 @@
 
                             break;
                         case 14:
+                        int fecha;
+                        System.out.println("Ingresa la fecha (mes y anio) de la obra que desea consultar: \n");
+                        fecha=scanner.nextInt();
+                        Calendar fCalendar=Calendar.getInstance();
+                        for (int i = 0; i < listaobras2.crearobras().size(); i++) {
+                            
+                            System.out.println("Mes: "+fCalendar.setTime(Year););  
+                            System.out.println("Anio: "+fCalendar.setTime(Month));
+                        }
 
                             break;
                         case 15:

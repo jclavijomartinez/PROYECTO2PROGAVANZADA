@@ -34,7 +34,7 @@ public class GestionObras {
     public void EliminarObra(int codigo, List<Obra> listaobras, int codigoCompra) throws Exception {
         for (int i = 0; i < listaobras.size(); i++) {
             if (codigo == listaobras.get(i).getCodigoObra()) {
-                System.out.print("La mierda existe"); //cambiar a otra cosa
+                System.out.print("existe"); //cambiar a otra cosa
             } else {
                 throw new Exception();
 
