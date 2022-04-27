@@ -20,4 +20,9 @@ public class GestionClientes {
 
         return Listaclientes;
     }
+    public void EliminarCliente(int codigo, List<Cliente> listClientes, int codigoCompra ) {
+        for (int index = 0; index < lis; index++) {
+            
+        }
+    }
 }

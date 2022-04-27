@@ -8,7 +8,7 @@ public class Obra {
     private float precioRef;
     private String dimensiones;
     private boolean disponible;
-    private int compra;
+    private int codigoCompra;
 
     public void setCodigoObra(Long codigoObra2){
         this.codigoObra = codigoObra2;
@@ -59,7 +59,6 @@ public class Obra {
     }
    
 
-<<<<<<< HEAD
     public void setCodigoCompra(int codigoCompra) {
         this.codigoCompra = codigoCompra;
     }
@@ -77,18 +76,13 @@ public class Obra {
         }
     }
 
-    public Obra( String codigoObra, String titulo, Calendar fecha, float precioRef, String dimensiones,boolean disponible) {
-        this.setCodigoObra(verificarcodigo(codigoObra));
-=======
-    public Obra(Long codigoObra, String titulo, Calendar fecha, float precioRef, String dimensiones,
-            boolean disponible,int codigoCompra) {
-        this.setCodigoObra(codigoObra);
->>>>>>> 66f94f3901bb6ea0b2a15dbaa35c9a416beb4bc9
+    public Obra( long l, String titulo, Calendar fecha, float precioRef, String dimensiones,boolean disponible,int codigoCompra) {
+        this.setCodigoObra(verificarcodigo(l));
         this.setTitulo(titulo);
         this.setFecha(fecha);
         this.setPrecioRef(precioRef);
         this.setDimensiones(dimensiones);
         this.setDisponibles(disponible);
-        this.setcodigoCompra(codigoCompra);
+        this.setCodigoCompra(codigoCompra);
     }
 }
