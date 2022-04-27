@@ -12,6 +12,7 @@ public class Obra {
 
     public void setCodigoObra(Long codigoObra2){
         this.codigoObra = codigoObra2;
+        
     }
 
     public Long getCodigoObra() {
@@ -77,7 +78,7 @@ public class Obra {
     }
 
     public Obra( long l, String titulo, Calendar fecha, float precioRef, String dimensiones,boolean disponible,int codigoCompra) {
-        this.setCodigoObra(verificarcodigo(l));
+		this.setCodigoObra(verificarcodigo(l));
         this.setTitulo(titulo);
         this.setFecha(fecha);
         this.setPrecioRef(precioRef);
