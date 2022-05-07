@@ -370,7 +370,7 @@ import java.util.*;
                                     System.out.println("El codigo no aparece, porfavor cree uno y vuuelva a intentar");
                                 }
                             } catch (Exception e) {
-                                //TODO: handle exception
+                                break;
                             }
                             break;
 
@@ -467,7 +467,7 @@ import java.util.*;
                         Calendar fCalendar=Calendar.getInstance();
                         for (int i = 0; i < listaobras2.crearobras().size(); i++) {
                             
-                            System.out.println("Mes: "+fCalendar.setTime(Year););  
+                            System.out.println("Mes: "+fCalendar.setTime(Year));  
                             System.out.println("Anio: "+fCalendar.setTime(Month));
                         }
 
